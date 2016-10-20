@@ -8,9 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		A1BEAB5DFD4BAEDAD15F8325 /* libPods-NetEaseNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9DEB7B7B7B696B9A4A0F03 /* libPods-NetEaseNews.a */; };
+		A949F9B61DB871D5000745A0 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A949F9B41DB871D5000745A0 /* NewsViewController.m */; };
+		A949F9B71DB871D5000745A0 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A949F9B51DB871D5000745A0 /* NewsViewController.xib */; };
+		A949F9BB1DB87216000745A0 /* LiveVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A949F9B91DB87216000745A0 /* LiveVideoViewController.m */; };
+		A949F9BC1DB87216000745A0 /* LiveVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A949F9BA1DB87216000745A0 /* LiveVideoViewController.xib */; };
+		A949F9C01DB87255000745A0 /* TopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A949F9BE1DB87255000745A0 /* TopicViewController.m */; };
+		A949F9C11DB87255000745A0 /* TopicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A949F9BF1DB87255000745A0 /* TopicViewController.xib */; };
+		A949F9C51DB8727C000745A0 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A949F9C31DB8727C000745A0 /* ProfileViewController.m */; };
+		A949F9C61DB8727C000745A0 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A949F9C41DB8727C000745A0 /* ProfileViewController.xib */; };
 		A94D89661DB6F6DC004C3458 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A94D89651DB6F6DC004C3458 /* main.m */; };
 		A94D89691DB6F6DC004C3458 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A94D89681DB6F6DC004C3458 /* AppDelegate.m */; };
-		A94D896C1DB6F6DC004C3458 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94D896B1DB6F6DC004C3458 /* ViewController.m */; };
+		A94D896C1DB6F6DC004C3458 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94D896B1DB6F6DC004C3458 /* TabViewController.m */; };
 		A94D896F1DB6F6DC004C3458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94D896D1DB6F6DC004C3458 /* Main.storyboard */; };
 		A94D89711DB6F6DC004C3458 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A94D89701DB6F6DC004C3458 /* Assets.xcassets */; };
 		A94D89741DB6F6DC004C3458 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94D89721DB6F6DC004C3458 /* LaunchScreen.storyboard */; };
@@ -45,12 +53,24 @@
 /* Begin PBXFileReference section */
 		37E70885638AC8502E89401A /* Pods-NetEaseNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetEaseNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetEaseNews/Pods-NetEaseNews.release.xcconfig"; sourceTree = "<group>"; };
 		7E9DEB7B7B7B696B9A4A0F03 /* libPods-NetEaseNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetEaseNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A949F9B31DB871D5000745A0 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		A949F9B41DB871D5000745A0 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		A949F9B51DB871D5000745A0 /* NewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
+		A949F9B81DB87216000745A0 /* LiveVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveVideoViewController.h; sourceTree = "<group>"; };
+		A949F9B91DB87216000745A0 /* LiveVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveVideoViewController.m; sourceTree = "<group>"; };
+		A949F9BA1DB87216000745A0 /* LiveVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveVideoViewController.xib; sourceTree = "<group>"; };
+		A949F9BD1DB87255000745A0 /* TopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicViewController.h; sourceTree = "<group>"; };
+		A949F9BE1DB87255000745A0 /* TopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicViewController.m; sourceTree = "<group>"; };
+		A949F9BF1DB87255000745A0 /* TopicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicViewController.xib; sourceTree = "<group>"; };
+		A949F9C21DB8727C000745A0 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		A949F9C31DB8727C000745A0 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		A949F9C41DB8727C000745A0 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		A94D89611DB6F6DC004C3458 /* NetEaseNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetEaseNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94D89651DB6F6DC004C3458 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A94D89671DB6F6DC004C3458 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A94D89681DB6F6DC004C3458 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A94D896A1DB6F6DC004C3458 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A94D896B1DB6F6DC004C3458 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A94D896A1DB6F6DC004C3458 /* TabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
+		A94D896B1DB6F6DC004C3458 /* TabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
 		A94D896E1DB6F6DC004C3458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A94D89701DB6F6DC004C3458 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A94D89731DB6F6DC004C3458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -119,6 +139,46 @@
 				7E9DEB7B7B7B696B9A4A0F03 /* libPods-NetEaseNews.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A949F9C71DB87285000745A0 /* NewsTab */ = {
+			isa = PBXGroup;
+			children = (
+				A949F9B31DB871D5000745A0 /* NewsViewController.h */,
+				A949F9B41DB871D5000745A0 /* NewsViewController.m */,
+				A949F9B51DB871D5000745A0 /* NewsViewController.xib */,
+			);
+			name = NewsTab;
+			sourceTree = "<group>";
+		};
+		A949F9C81DB87290000745A0 /* LiveVideoTab */ = {
+			isa = PBXGroup;
+			children = (
+				A949F9B81DB87216000745A0 /* LiveVideoViewController.h */,
+				A949F9B91DB87216000745A0 /* LiveVideoViewController.m */,
+				A949F9BA1DB87216000745A0 /* LiveVideoViewController.xib */,
+			);
+			name = LiveVideoTab;
+			sourceTree = "<group>";
+		};
+		A949F9C91DB8729D000745A0 /* TopicTab */ = {
+			isa = PBXGroup;
+			children = (
+				A949F9BD1DB87255000745A0 /* TopicViewController.h */,
+				A949F9BE1DB87255000745A0 /* TopicViewController.m */,
+				A949F9BF1DB87255000745A0 /* TopicViewController.xib */,
+			);
+			name = TopicTab;
+			sourceTree = "<group>";
+		};
+		A949F9CA1DB872B2000745A0 /* ProfileTab */ = {
+			isa = PBXGroup;
+			children = (
+				A949F9C21DB8727C000745A0 /* ProfileViewController.h */,
+				A949F9C31DB8727C000745A0 /* ProfileViewController.m */,
+				A949F9C41DB8727C000745A0 /* ProfileViewController.xib */,
+			);
+			name = ProfileTab;
 			sourceTree = "<group>";
 		};
 		A94D89581DB6F6DC004C3458 = {
@@ -222,8 +282,12 @@
 		A9AA8DFD1DB776AD009D5424 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				A94D896A1DB6F6DC004C3458 /* ViewController.h */,
-				A94D896B1DB6F6DC004C3458 /* ViewController.m */,
+				A949F9C71DB87285000745A0 /* NewsTab */,
+				A949F9C81DB87290000745A0 /* LiveVideoTab */,
+				A949F9C91DB8729D000745A0 /* TopicTab */,
+				A949F9CA1DB872B2000745A0 /* ProfileTab */,
+				A94D896A1DB6F6DC004C3458 /* TabViewController.h */,
+				A94D896B1DB6F6DC004C3458 /* TabViewController.m */,
 				A9AA8DE51DB75137009D5424 /* SplashView.h */,
 				A9AA8DE61DB75137009D5424 /* SplashView.m */,
 				A9AA8DE81DB7514B009D5424 /* SplashView.xib */,
@@ -340,7 +404,11 @@
 			files = (
 				A94D89741DB6F6DC004C3458 /* LaunchScreen.storyboard in Resources */,
 				A9AA8DE91DB7514B009D5424 /* SplashView.xib in Resources */,
+				A949F9C61DB8727C000745A0 /* ProfileViewController.xib in Resources */,
+				A949F9BC1DB87216000745A0 /* LiveVideoViewController.xib in Resources */,
+				A949F9B71DB871D5000745A0 /* NewsViewController.xib in Resources */,
 				A94D89711DB6F6DC004C3458 /* Assets.xcassets in Resources */,
+				A949F9C11DB87255000745A0 /* TopicViewController.xib in Resources */,
 				A94D896F1DB6F6DC004C3458 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,13 +482,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A949F9BB1DB87216000745A0 /* LiveVideoViewController.m in Sources */,
 				A9AA8DF31DB774D9009D5424 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
+				A949F9C01DB87255000745A0 /* TopicViewController.m in Sources */,
 				A9AA8DF91DB7754C009D5424 /* DatabaseManager.m in Sources */,
 				A9AA8DF61DB774EF009D5424 /* MBProgressHUD+EasyUse.m in Sources */,
 				A9AA8DED1DB774B0009D5424 /* HTTPSessionManager.m in Sources */,
 				A9AA8DF01DB774BA009D5424 /* UIView+Vokie.m in Sources */,
-				A94D896C1DB6F6DC004C3458 /* ViewController.m in Sources */,
+				A94D896C1DB6F6DC004C3458 /* TabViewController.m in Sources */,
 				A9AA8DE71DB75137009D5424 /* SplashView.m in Sources */,
+				A949F9C51DB8727C000745A0 /* ProfileViewController.m in Sources */,
+				A949F9B61DB871D5000745A0 /* NewsViewController.m in Sources */,
 				A94D89691DB6F6DC004C3458 /* AppDelegate.m in Sources */,
 				A94D89661DB6F6DC004C3458 /* main.m in Sources */,
 			);

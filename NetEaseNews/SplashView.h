@@ -16,4 +16,6 @@
 @property (nonatomic, assign) CGFloat showTime;
 
 - (void)removeAndCleanUp;
+
+- (void)showInWindow;
 @end

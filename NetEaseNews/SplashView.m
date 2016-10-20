@@ -100,6 +100,17 @@
     
 }
 
+- (void)showInWindow {
+    [[[UIApplication sharedApplication]keyWindow]addSubview:self];
+    
+    [UIView animateWithDuration:0.2 delay:_showTime options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.alpha = 0.0f;
+    } completion:^(BOOL finished) {
+        [self removeAndCleanUp];
+        [self removeFromSuperview];
+    }];
+}
+
 - (void)removeAndCleanUp {
     //取消定时器
     [self.timer invalidate];

@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "TabViewController.h"
+#import "CommonHeader.h"
 
 @interface AppDelegate ()
 
@@ -26,16 +27,14 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     //初始化ViewController
-    ViewController *mainController=[[ViewController alloc]init];
-    mainController.isHiddenStatusBar = YES;
-    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:mainController];
+    TabViewController *tabVC=[[TabViewController alloc]init];
+    tabVC.isHiddenStatusBar = YES;
     
-    navigationController.navigationBar.barStyle = UIBarStyleBlack;
     //设置此控制器为window的根控制器
-    self.window.rootViewController = navigationController;
+    self.window.rootViewController = tabVC;
     
     //定义导航条的颜色
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:210.0/255 green:40.0/255 blue:45.0/255 alpha:1]];
+    [[UINavigationBar appearance] setBarTintColor:THEME_COLOR];
     
     
     CGFloat sysVersion = [[[UIDevice currentDevice] systemVersion] floatValue];

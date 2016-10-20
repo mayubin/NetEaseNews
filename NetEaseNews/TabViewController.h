@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TabViewController.h
 //  NetEaseNews
 //
 //  Created by Vokie on 2016/10/19.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface TabViewController : UITabBarController
 
 @property (nonatomic, assign) BOOL isHiddenStatusBar;
 @end
