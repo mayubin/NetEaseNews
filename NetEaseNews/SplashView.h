@@ -17,5 +17,5 @@
 
 - (void)removeAndCleanUp;
 
-- (void)showInWindow;
+- (void)showInView;
 @end

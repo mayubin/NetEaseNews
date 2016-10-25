@@ -7,7 +7,6 @@
 //
 
 #import "TabViewController.h"
-#import "SplashView.h"
 #import "NewsViewController.h"
 #import "LiveVideoViewController.h"
 #import "TopicViewController.h"
@@ -16,7 +15,6 @@
 
 @interface TabViewController ()
 
-@property (nonatomic, retain) SplashView *splashView;
 @end
 
 @implementation TabViewController
@@ -25,28 +23,13 @@
     self = [super init];
     if (self) {
         
+        NewsViewController *news = [[NewsViewController alloc]init];
+        news.isHiddenStatusBar = YES;
         
-        
-        _splashView = [[[NSBundle mainBundle] loadNibNamed:@"SplashView" owner:self options:nil] firstObject];
-        _splashView.frame = self.view.bounds;
-        _splashView.showTime = 2.5f;  //启动广告展示时间
-        
-        [_splashView showInWindow];
-        
-        
-        
-        //提前0.3秒显示状态栏，修复状态栏显示引起的导航栏跳跃
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((_splashView.showTime - 0.3) * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            _isHiddenStatusBar = NO;
-            [self setNeedsStatusBarAppearanceUpdate];
-        });
-        
-        
-        UINavigationController *newsVC = [[UINavigationController alloc]initWithRootViewController:[[NewsViewController alloc]init]];
+        UINavigationController *newsVC = [[UINavigationController alloc]initWithRootViewController:news];
         newsVC.tabBarItem.title = @"新闻";
         newsVC.tabBarItem.image = [UIImage imageNamed:@"tabbar_icon_news_normal"];
         newsVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_icon_news_highlight"];
-        
         
         UINavigationController *liveVideoVC = [[UINavigationController alloc]initWithRootViewController:[[LiveVideoViewController alloc]init]];
         liveVideoVC.tabBarItem.title = @"直播";
@@ -75,11 +58,8 @@
 }
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
  
-
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,7 +68,7 @@
 }
 
 - (BOOL)prefersStatusBarHidden {
-    return _isHiddenStatusBar;
+    return YES;
 }
 
 @end

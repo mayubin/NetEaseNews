@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A1BEAB5DFD4BAEDAD15F8325 /* libPods-NetEaseNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9DEB7B7B7B696B9A4A0F03 /* libPods-NetEaseNews.a */; };
+		A918F8B91DBEFBC80056D5D9 /* NavigationSegmentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A918F8B81DBEFBC80056D5D9 /* NavigationSegmentScrollView.m */; };
 		A949F9B61DB871D5000745A0 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A949F9B41DB871D5000745A0 /* NewsViewController.m */; };
 		A949F9B71DB871D5000745A0 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A949F9B51DB871D5000745A0 /* NewsViewController.xib */; };
 		A949F9BB1DB87216000745A0 /* LiveVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A949F9B91DB87216000745A0 /* LiveVideoViewController.m */; };
@@ -53,6 +54,8 @@
 /* Begin PBXFileReference section */
 		37E70885638AC8502E89401A /* Pods-NetEaseNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetEaseNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetEaseNews/Pods-NetEaseNews.release.xcconfig"; sourceTree = "<group>"; };
 		7E9DEB7B7B7B696B9A4A0F03 /* libPods-NetEaseNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetEaseNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A918F8B71DBEFBC80056D5D9 /* NavigationSegmentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationSegmentScrollView.h; sourceTree = "<group>"; };
+		A918F8B81DBEFBC80056D5D9 /* NavigationSegmentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationSegmentScrollView.m; sourceTree = "<group>"; };
 		A949F9B31DB871D5000745A0 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		A949F9B41DB871D5000745A0 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		A949F9B51DB871D5000745A0 /* NewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
@@ -141,6 +144,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A918F8B61DBEFB440056D5D9 /* ComponentUI */ = {
+			isa = PBXGroup;
+			children = (
+				A918F8B71DBEFBC80056D5D9 /* NavigationSegmentScrollView.h */,
+				A918F8B81DBEFBC80056D5D9 /* NavigationSegmentScrollView.m */,
+			);
+			name = ComponentUI;
+			sourceTree = "<group>";
+		};
 		A949F9C71DB87285000745A0 /* NewsTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,7 +218,8 @@
 		A94D89631DB6F6DC004C3458 /* NetEaseNews */ = {
 			isa = PBXGroup;
 			children = (
-				A9AA8DFD1DB776AD009D5424 /* UI */,
+				A918F8B61DBEFB440056D5D9 /* ComponentUI */,
+				A9AA8DFD1DB776AD009D5424 /* MainUI */,
 				A9AA8DFC1DB77661009D5424 /* Database */,
 				A9AA8DFB1DB77622009D5424 /* Catagory */,
 				A9AA8DFA1DB77604009D5424 /* Network */,
@@ -279,7 +292,7 @@
 			name = Database;
 			sourceTree = "<group>";
 		};
-		A9AA8DFD1DB776AD009D5424 /* UI */ = {
+		A9AA8DFD1DB776AD009D5424 /* MainUI */ = {
 			isa = PBXGroup;
 			children = (
 				A949F9C71DB87285000745A0 /* NewsTab */,
@@ -292,7 +305,7 @@
 				A9AA8DE61DB75137009D5424 /* SplashView.m */,
 				A9AA8DE81DB7514B009D5424 /* SplashView.xib */,
 			);
-			name = UI;
+			name = MainUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,6 +502,7 @@
 				A9AA8DF61DB774EF009D5424 /* MBProgressHUD+EasyUse.m in Sources */,
 				A9AA8DED1DB774B0009D5424 /* HTTPSessionManager.m in Sources */,
 				A9AA8DF01DB774BA009D5424 /* UIView+Vokie.m in Sources */,
+				A918F8B91DBEFBC80056D5D9 /* NavigationSegmentScrollView.m in Sources */,
 				A94D896C1DB6F6DC004C3458 /* TabViewController.m in Sources */,
 				A9AA8DE71DB75137009D5424 /* SplashView.m in Sources */,
 				A949F9C51DB8727C000745A0 /* ProfileViewController.m in Sources */,

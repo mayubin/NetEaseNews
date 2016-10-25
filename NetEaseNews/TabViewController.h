@@ -10,6 +10,6 @@
 
 @interface TabViewController : UITabBarController
 
-@property (nonatomic, assign) BOOL isHiddenStatusBar;
+
 @end
 

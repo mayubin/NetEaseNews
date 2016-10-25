@@ -10,4 +10,5 @@
 
 @interface LiveVideoViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollContentView;
 @end

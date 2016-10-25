@@ -28,7 +28,6 @@
     
     //初始化ViewController
     TabViewController *tabVC=[[TabViewController alloc]init];
-    tabVC.isHiddenStatusBar = YES;
     
     //设置此控制器为window的根控制器
     self.window.rootViewController = tabVC;

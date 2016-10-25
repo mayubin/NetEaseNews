@@ -100,7 +100,7 @@
     
 }
 
-- (void)showInWindow {
+- (void)showInView {
     [[[UIApplication sharedApplication]keyWindow]addSubview:self];
     
     [UIView animateWithDuration:0.2 delay:_showTime options:UIViewAnimationOptionCurveEaseOut animations:^{

@@ -8,9 +8,12 @@
 
 #import "NewsViewController.h"
 #import "CommonHeader.h"
+#import "SplashView.h"
 @interface NewsViewController ()
 
 @property (nonatomic, retain) UIImageView *liveImageView;
+
+@property (nonatomic, retain) SplashView *splashView;
 @property (nonatomic, retain) UILabel *numberLabel;
 @end
 
@@ -23,6 +26,23 @@
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     [self initNavigationBarItem];
+    
+    _splashView = [[[NSBundle mainBundle] loadNibNamed:@"SplashView" owner:self options:nil] firstObject];
+    _splashView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    _splashView.showTime = 2.5f;  //启动广告展示时间
+    
+    //提前0.3秒显示状态栏，修复状态栏显示引起的导航栏跳跃
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((_splashView.showTime - 0.3) * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        _isHiddenStatusBar = NO;
+        [self setNeedsStatusBarAppearanceUpdate];
+        [self runLiveVideoAction];
+    });
+    [_splashView showInView];
+    
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return _isHiddenStatusBar;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,7 +51,7 @@
 }
 
 
-#pragma mark - Custom Event
+#pragma mark - Custom Method
 - (void)initNavigationBarItem {
     UIImageView *titleImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"navbar_netease"]];
     self.navigationItem.titleView = titleImageView;
@@ -77,9 +97,7 @@
     
 }
 
-#pragma mark - Touch Event
-- (void)searchEvent:(id)sender {
-    NSLog(@"search event");
+- (void)runLiveVideoAction {
     [_liveImageView startAnimating];
     
     _numberLabel.center = CGPointMake(-25, _liveImageView.bounds.size.height / 2.0);
@@ -92,6 +110,12 @@
     } completion:^(BOOL finished) {
         
     }];
+}
+
+#pragma mark - Touch Event
+- (void)searchEvent:(id)sender {
+    NSLog(@"search event");
+    [self runLiveVideoAction];
 }
 
 - (void)liveEvent:(id)sender {
