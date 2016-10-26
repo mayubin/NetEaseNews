@@ -53,8 +53,11 @@
     self.scrollContentView.showsHorizontalScrollIndicator = NO;
     self.scrollContentView.delegate = self;
     
-    [RACObserve(self.scrollContentView, contentOffset) subscribeNext:^(id x) {
-        NSLog(@"%@", x);
+    [RACObserve(self.scrollContentView, contentOffset) subscribeNext:^(id value) {
+        CGPoint offset = [value CGPointValue];
+        CGFloat rate = offset.x / SCREEN_WIDTH;
+        [_navigationSegmentScrollView scrollWithRate:rate];
+        
     }];
 }
 

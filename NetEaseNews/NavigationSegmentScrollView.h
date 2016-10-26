@@ -11,4 +11,5 @@
 @interface NavigationSegmentScrollView : UIView
 
 @property (nonatomic, retain) UIView *hilightedView;
+- (void)scrollWithRate:(CGFloat)rate;
 @end

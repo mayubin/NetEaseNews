@@ -8,6 +8,12 @@
 
 #import "NavigationSegmentScrollView.h"
 #import "CommonHeader.h"
+#import "UIView+Vokie.h"
+
+@interface NavigationSegmentScrollView()
+@property (nonatomic, retain) UILabel *leftLabel;
+@property (nonatomic, retain) UILabel *rightLabel;
+@end
 
 @implementation NavigationSegmentScrollView
 
@@ -27,23 +33,33 @@
         [self addSubview:_hilightedView];
         
         
-        UILabel *leftLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, frame.size.width / 2.0, frame.size.height)];
-        leftLabel.textColor = THEME_COLOR;
-        leftLabel.textAlignment = NSTextAlignmentCenter;
-        leftLabel.font = [UIFont systemFontOfSize:12];
-        leftLabel.text = @"热门";
-        [self addSubview:leftLabel];
+        _leftLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, frame.size.width / 2.0, frame.size.height)];
+        _leftLabel.textColor = THEME_COLOR;
+        _leftLabel.textAlignment = NSTextAlignmentCenter;
+        _leftLabel.font = [UIFont systemFontOfSize:12];
+        _leftLabel.text = @"热门";
+        [self addSubview:_leftLabel];
         
-        UILabel *rightLabel = [[UILabel alloc]initWithFrame:CGRectMake(frame.size.width / 2.0, 0, frame.size.width / 2.0, frame.size.height)];
-        rightLabel.textColor = [UIColor whiteColor];
-        rightLabel.textAlignment = NSTextAlignmentCenter;
-        rightLabel.font = [UIFont systemFontOfSize:12];
-        rightLabel.text = @"分类";
-        [self addSubview:rightLabel];
+        _rightLabel = [[UILabel alloc]initWithFrame:CGRectMake(frame.size.width / 2.0, 0, frame.size.width / 2.0, frame.size.height)];
+        _rightLabel.textColor = [UIColor whiteColor];
+        _rightLabel.textAlignment = NSTextAlignmentCenter;
+        _rightLabel.font = [UIFont systemFontOfSize:12];
+        _rightLabel.text = @"分类";
+        [self addSubview:_rightLabel];
         
         
     }
     return self;
+}
+
+- (void)scrollWithRate:(CGFloat)rate {
+    _hilightedView.left = self.width * rate / 2.0;
+    
+    CGFloat antiRate = 1 - rate;
+    
+    _leftLabel.textColor = [UIColor colorWithRed:(255.0 - 45.0 * antiRate) / 255.0 green:(255.0 - 215.0 * antiRate) / 255.0 blue:(255.0 - 210.0 * antiRate) / 255.0 alpha:1.0];
+    
+    _rightLabel.textColor = [UIColor colorWithRed:(255.0 - 45.0 * rate) / 255.0 green:(255.0 - 215.0 * rate) / 255.0 blue:(255.0 - 210.0 * rate) / 255.0 alpha:1.0];
 }
 
 @end
