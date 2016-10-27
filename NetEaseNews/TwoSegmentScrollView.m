@@ -1,21 +1,21 @@
 //
-//  NavigationSegmentScrollView.m
+//  TwoSegmentScrollView.m
 //  NetEaseNews
 //
 //  Created by Vokie on 2016/10/25.
 //  Copyright © 2016年 Vokie. All rights reserved.
 //
 
-#import "NavigationSegmentScrollView.h"
+#import "TwoSegmentScrollView.h"
 #import "CommonHeader.h"
 #import "UIView+Vokie.h"
 
-@interface NavigationSegmentScrollView()
+@interface TwoSegmentScrollView()
 @property (nonatomic, retain) UILabel *leftLabel;
 @property (nonatomic, retain) UILabel *rightLabel;
 @end
 
-@implementation NavigationSegmentScrollView
+@implementation TwoSegmentScrollView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

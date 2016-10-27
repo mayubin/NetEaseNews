@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "CommonHeader.h"
 
 @interface ProfileViewController ()
 
@@ -16,7 +17,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
+    self.navigationController.navigationBar.hidden = YES;
+    self.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    [self initHeaderView];
+    
+    
+}
+
+- (void)initHeaderView {
+    UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 180)];
+    headerView.backgroundColor = THEME_COLOR;
+    
+    self.mTableView.tableHeaderView = headerView;
+    
+    [RACObserve(self.mTableView, contentOffset) subscribeNext:^(id x) {
+        
+        //获取偏移量
+        CGPoint offset = [x CGPointValue];
+        //判断是否改变
+        if (offset.y < 0) {
+            CGRect rect = self.mTableView.tableHeaderView.frame;
+            //我们只需要改变图片的y值和高度即可
+            rect.origin.y = offset.y;
+            rect.size.height = 200 - offset.y;
+            self.mTableView.tableHeaderView.frame = rect;
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

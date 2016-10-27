@@ -7,15 +7,14 @@
 //
 
 #import "LiveVideoViewController.h"
-#import "NavigationSegmentScrollView.h"
+#import "TwoSegmentScrollView.h"
 #import "CommonHeader.h"
-#import <ReactiveCocoa.h>
 
 #define SCROLL_CONTENT_HEIGHT   SCREEN_HEIGHT - 64 - 44
 
 @interface LiveVideoViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
-@property (nonatomic, retain) NavigationSegmentScrollView *navigationSegmentScrollView;
+@property (nonatomic, retain) TwoSegmentScrollView *segmentScrollView;
 @property (nonatomic, retain) UITableView *hotTableView;
 @property (nonatomic, retain) UITableView *categoryTableView;
 @end
@@ -27,9 +26,9 @@
     
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     
-    _navigationSegmentScrollView = [[NavigationSegmentScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH * 0.4, 25)];
+    _segmentScrollView = [[TwoSegmentScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH * 0.4, 25)];
 
-    self.navigationItem.titleView = _navigationSegmentScrollView;
+    self.navigationItem.titleView = _segmentScrollView;
     
     [self initTableView];
 }
@@ -56,7 +55,7 @@
     [RACObserve(self.scrollContentView, contentOffset) subscribeNext:^(id value) {
         CGPoint offset = [value CGPointValue];
         CGFloat rate = offset.x / SCREEN_WIDTH;
-        [_navigationSegmentScrollView scrollWithRate:rate];
+        [_segmentScrollView scrollWithRate:rate];
         
     }];
 }
@@ -71,7 +70,7 @@
         if (!cell) {
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SYSCELL"];
         }
-        cell.textLabel.text = @"测试、";
+        cell.textLabel.text = @"热门、";
         return cell;
     }else if ([tableView isEqual:_categoryTableView]) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SYSCELL2"];

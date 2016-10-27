@@ -10,6 +10,7 @@
 #define CommonHeader_h
 
 #import <Masonry.h>
+#import <ReactiveCocoa.h>
 
 #define BaseURL @"http://3g.163.com"
 

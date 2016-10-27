@@ -10,4 +10,5 @@
 
 @interface TopicViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollContentView;
 @end
