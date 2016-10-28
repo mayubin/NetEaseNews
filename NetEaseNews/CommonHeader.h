@@ -14,7 +14,9 @@
 
 #define BaseURL @"http://3g.163.com"
 
-#define THEME_COLOR [UIColor colorWithRed:210.0/255 green:40.0/255 blue:45.0/255 alpha:1]
+#define UIColorMake(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+
+#define THEME_COLOR UIColorMake(210.0, 40.0, 45.0)
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
